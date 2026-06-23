@@ -1,0 +1,42 @@
+.diet-card__link {
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $text-color-basic;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+
+    width: 24px;
+    height: 12px;
+
+    background-image: url("./../../icons/icon-arrow.svg");
+    background-repeat: no-repeat;
+
+    transition: width 0.2s ease;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    width: 32px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+
+    font-size: 20px;
+  }
+}

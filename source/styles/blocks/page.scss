@@ -1,0 +1,13 @@
+.page__body {
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: $text-color-basic-2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
