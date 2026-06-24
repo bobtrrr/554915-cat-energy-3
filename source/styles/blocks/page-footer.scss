@@ -1,0 +1,93 @@
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-color: $bg-color-base;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
+.page-footer__logo {
+  flex-shrink: 0;
+
+  width: 128px;
+  height: 24px;
+}
+
+.page-footer__line {
+  @media (max-width: $mobile-width-only) {
+    height: 1px;
+    width: 100%;
+
+    background-color: #d9d9d9;
+  }
+}
+
+.page-footer__social {
+  @media (min-width: $tablet-width) {
+    width: 236px;
+    margin-left: 40px;
+
+    outline: 1px solid red;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 284px;
+  }
+}
+
+.page-footer__link {
+  align-self: stretch;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 23px;
+
+  color: inherit;
+  font-size: 16px;
+  line-height: 125%;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+
+    width: 27px;
+    height: 34px;
+
+    mask-image: url("./../../icons/htmlacademy-logo.svg");
+    mask-repeat: no-repeat;
+    background-color: $bg-color-icon;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $bg-color-icon-hover;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: normal;
+    align-self: auto;
+
+    margin-left: auto;
+  }
+}

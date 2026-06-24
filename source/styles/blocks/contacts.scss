@@ -84,6 +84,7 @@
 
 .contacts__map-container {
   width: 320px;
+
   height: 362px;
   margin-left: auto;
   margin-right: auto;
@@ -96,6 +97,8 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: -1;
 
     width: 1440px;
