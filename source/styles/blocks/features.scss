@@ -1,0 +1,134 @@
+.features {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+
+    border-bottom: 1px solid $border-color-base;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+
+    border-bottom: none;
+  }
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 111%;
+  color: $text-color-basic;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+}
+
+.features__list {
+  display: grid;
+  row-gap: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 249px);
+    gap: 77px 135px;
+
+    counter-reset: list-item;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 250px);
+    gap: 75px;
+  }
+}
+
+.features__item {
+  display: flex;
+  gap: 20px;
+
+  outline: 1px solid red;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    flex-direction: column;
+    gap: 30px;
+
+    padding-bottom: 57px;
+
+    counter-increment: list-item;
+
+    &::after {
+      content: counter(list-item);
+
+      position: absolute;
+      top: -40px;
+      right: 0;
+      z-index: -1;
+
+
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 100%;
+      color: $text-color-secondary;
+    }
+  }
+}
+
+.features__item--icon-leaf::before,
+.features__item--icon-form::before,
+.features__item--icon-eat::before,
+.features__item--icon-time::before {
+  content: "";
+
+  flex-shrink: 0;
+
+  width: 60px;
+  height: 60px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $bg-color-special;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__item--icon-leaf::before {
+  background-size: 25px 28px;
+  background-image: url("./../../icons/icon-leaf.svg");
+}
+
+.features__item--icon-form::before {
+  background-size: 26px 29px;
+  background-image: url("./../../icons/icon-form.svg");
+}
+
+.features__item--icon-eat::before {
+  background-size: 25px 30px;
+  background-image: url("./../../icons/icon-eat.svg");
+}
+
+.features__item--icon-time::before {
+  background-size: 27px 31px;
+  background-image: url("./../../icons/icon-time.svg");
+}
+
+.features__item-description {
+  margin: 0;
+}
