@@ -25,6 +25,8 @@
 }
 
 .page-footer__line {
+  display: none;
+
   @media (max-width: $mobile-width-only) {
     height: 1px;
     width: 100%;
