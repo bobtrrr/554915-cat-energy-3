@@ -1,0 +1,38 @@
+.toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::before {
+    content: "";
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url("./../../icons/toggle-button-closed.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.toggle-button--opened {
+  &::before {
+    width: 18px;
+    height: 18px;
+
+    background-image: url("./../../icons/toggle-button-opened.svg");
+  }
+}

@@ -50,15 +50,15 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 250px);
-    gap: 75px;
+    gap: 54px;
+    justify-content: space-between;
   }
 }
 
 .features__item {
+  box-sizing: border-box;
   display: flex;
   gap: 20px;
-
-  outline: 1px solid red;
 
   @media (min-width: $tablet-width) {
     position: relative;

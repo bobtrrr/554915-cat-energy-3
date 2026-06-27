@@ -30,7 +30,6 @@
     padding-left: 80px;
     padding-right: 78px;
 
-    outline: 1px solid brown;
     background-color: $bg-color-accent;
   }
 }
@@ -45,7 +44,6 @@
   text-transform: uppercase;
   color: $text-color-basic-3;
 
-  outline: 1px solid green;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -54,8 +52,6 @@
 }
 
 .contacts__address {
-  outline: 1px solid green;
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
