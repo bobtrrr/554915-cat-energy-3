@@ -22,3 +22,35 @@
     margin-top: -142px;
   }
 }
+
+.page__heading {
+  padding-top: 26px;
+  padding-bottom: 40px;
+
+  border-top: 1px solid $border-color-base-3;
+  border-bottom: 1px solid $border-color-base-3;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 84px;
+
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 49px;
+  }
+}
+
+.page__heading-title {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  color: $text-color-basic;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
+}
