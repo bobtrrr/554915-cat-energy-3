@@ -12,8 +12,8 @@
   color: $text-color-basic-2;
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 150%;
+    // font-size: 16px;
+    // line-height: 150%;
   }
 }
 
@@ -45,6 +45,7 @@
 .page__heading-title {
   margin: 0;
 
+  font-family: $second-family;
   font-weight: 400;
   font-size: 36px;
   line-height: 100%;

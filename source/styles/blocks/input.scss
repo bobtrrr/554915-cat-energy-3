@@ -1,0 +1,48 @@
+.input {
+  box-sizing: border-box;
+
+  display: inline-flex;
+
+  width: 100%;
+  padding: 10px 20px;
+
+  color: inherit;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  border: none;
+  cursor: pointer;
+
+  outline: 1px solid $border-color-base-light-2;
+  outline-offset: -1px;
+
+  &:hover {
+    outline-color: $border-color-base-2;
+  }
+
+  &:focus {
+    outline-color: $border-color-base-dark;
+    outline-width: 2px;
+    outline-offset: -2px;
+  }
+
+
+  &:user-invalid {
+    outline-color: $border-color-error;
+    outline-width: 2px;
+    outline-offset: -2px;
+  }
+}
+
+.input--error {
+  outline-color: $border-color-error;
+  outline-width: 2px;
+  outline-offset: -2px;
+
+  &:hover,
+  &:focus {
+    outline-color: $border-color-error;
+  }
+}

@@ -68,14 +68,11 @@
   width: 165px;
   margin: 0;
 
-  font-family: $font-family;
   font-weight: 400;
   font-size: 16px;
   line-height: 125%;
   text-align: center;
-  color: $bg-color-accent;
-
-  outline: 1px solid yellow;
+  color: $text-color-accent;
 
   @media (min-width: $tablet-width) {
     width: 165px;

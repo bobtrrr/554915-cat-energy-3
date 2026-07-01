@@ -16,7 +16,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 80px;
 
-
     padding: 26px 38px 28px;
   }
 
@@ -30,12 +29,12 @@
 }
 
 .additional-product__title {
-  outline: 1px solid blueviolet;
 
   grid-area: title;
 
   margin: 0;
 
+  font-family: $second-family;
   font-size: 16px;
   line-height: 100%;
   text-transform: uppercase;
@@ -47,18 +46,13 @@
 }
 
 .additional-product__params {
-  outline: 1px solid burlywood;
-
   grid-area: params;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
   gap: 15px 40px;
 
-  font-family: $font-family;
   line-height: 100%;
-  color: $text-color-basic-2;
 
   @media (min-width: $tablet-width) {
     column-gap: 49px;
@@ -69,12 +63,16 @@
   }
 
   @media (min-width: $desktop-width) {
+    justify-self: stretch;
+
     width: 100%;
   }
 }
 
 .additional-product__params-item {
-  background-color: rgba(grey, 0.2);
+  &:nth-child(even) {
+    justify-self: end;
+  }
 }
 
 .additional-product__params-value {

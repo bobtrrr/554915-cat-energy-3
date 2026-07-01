@@ -288,7 +288,7 @@
               <dt class="visually-hidden">Объем</dt>
               <dd class="additional-product__params-value">1 упаковка (100 г)</dd>
             </div>
-            <div class="additional-product__params-item">
+            <div class="additional-product__params-item additional-product__params-item--align-right">
               <dt class="visually-hidden">Цена</dt>
               <dd class="additional-product__params-value">200 ₽</dd>
             </div>
@@ -347,8 +347,8 @@
       </ul>
 
       <div class="additional-products__gift gift">
-        <p class="gift__text">З
-          акажите все <br>
+        <p class="gift__text">
+          Закажите все <br>
           и получите чехол для <br>
           кота в подарок!
         </p>
@@ -360,14 +360,16 @@
 
       <p class="newsletters__title">Акции и новинки</p>
 
-      <p class="newsletters__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+      <div class="newsletters__content">
+        <p class="newsletters__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
 
-      <form class="newsletters__form newsletters-form" action="https://echo.htmlacademy.ru" method="post">
-        <label class="visually-hidden" for="user-email-field">Email</label>
-        <input class="newsletters-form__input.input" type="email" name="user-email" id="user-email-field" placeholder="кuklachev@gmail.com">
+        <form class="newsletters__form newsletters-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="user-email-field">Email</label>
+          <input class="newsletters-form__input input" type="email" name="user-email" id="user-email-field" placeholder="кuklachev@gmail.com">
 
-        <button class="newsletters-form__button button" type="submit">Подписаться</button>
-      </form>
+          <button class="newsletters-form__button button button--primary button--size-l" type="submit">Подписаться</button>
+        </form>
+      </div>
 
     </section>
   </main>

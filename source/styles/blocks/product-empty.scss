@@ -38,6 +38,7 @@
   margin: 0;
   margin-bottom: 8px;
 
+  font-family: $econd-family;
   font-weight: 400;
   font-size: 16px;
   line-height: 125%;
@@ -61,12 +62,10 @@
 .product-empty__description {
   margin: 0;
 
-  font-family: $font-family;
   font-weight: 400;
   font-size: 12px;
   line-height: 133%;
   text-align: center;
-  color: $text-color-basic-2;
 
   @media (min-width: $tablet-width) {
     width: 170px;
