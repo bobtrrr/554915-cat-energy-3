@@ -1,0 +1,94 @@
+.checkout-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "info"
+    "diet"
+    "contacts"
+    "comment"
+    "products"
+    "button";
+  row-gap: 24px;
+
+  @include adaptiveScreenFrom(tablet) {
+    row-gap: 65px;
+  }
+
+  @include adaptiveScreenFrom(desktop) {
+    gap: 70px 80px;
+    grid-template-areas:
+      "info     diet"
+      "contacts contacts"
+      "comment  comment"
+      "products products"
+      "button   button";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.checkout-form__fieldset-info {
+  grid-area: info;
+}
+
+.checkout-form__fieldset-diet {
+  grid-area: diet;
+
+  padding-top: 22px;
+  padding-bottom: 19px;
+
+  @include adaptiveScreenFrom(tablet) {
+    padding-bottom: 27px;
+    padding-left: 27px;
+
+    outline: 1px solid $border-color-base-light-2;
+    outline-offset: -1px;
+  }
+
+  @include adaptiveScreenFrom(desktop) {
+    padding: 25px 28px;
+  }
+}
+
+.checkout-form__fieldset-contacts {
+  grid-area: contacts;
+}
+
+.checkout-form__fieldset-comment {
+  grid-area: comment;
+}
+
+.checkout-form__fieldset-products {
+  grid-area: products;
+}
+
+.checkout-form__button-wrapper {
+  grid-area: button;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 21px;
+
+  @include adaptiveScreenFrom(tablet) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    align-items: center;
+  }
+
+  @include adaptiveScreenFrom(desktop) {
+    column-gap: 80px;
+  }
+}
+
+.checkout-form__note {
+  margin: 0;
+
+  line-height: 114%;
+  text-align: center;
+  color: $text-color-basic;
+
+  @include adaptiveScreenFrom(tablet) {
+    font-size: 16px;
+    line-height: 100%;
+    text-align: left;
+  }
+}

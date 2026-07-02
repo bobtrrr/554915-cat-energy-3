@@ -1,0 +1,132 @@
+.field {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 13px;
+
+  &:has(.field__control:focus-visible)::after {
+    background-color: $bg-color-icon-hover;
+  }
+
+  &:has(.field__control:user-invalid)::after,
+  &:has(.field__control--error)::after {
+    background-color: $border-color-error;
+  }
+}
+
+.field--icon-email::after,
+.field--icon-phone::after {
+  grid-column: -1 / -2;
+  grid-row: 1 / 2;
+  place-self: center end;
+
+  content: "";
+
+  width: 20px;
+  height: 20px;
+  margin-right: 13px;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $bg-color-icon-dark;
+
+  @include adaptiveScreenFrom(tablet) {
+    margin-right: 14px;
+  }
+
+  @include adaptiveScreenFrom(desktop) {
+    margin-right: 15px;
+  }
+}
+
+.field--icon-email::after {
+  mask-image: url("./../../icons/icon-email.svg");
+  mask-size: 18px 14px;
+}
+
+.field--icon-phone::after {
+  mask-image: url("./../../icons/icon-phone.svg");
+  mask-size: 16px 16px;
+}
+
+.field__label {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  font-family: $second-family;
+  font-size: 16px;
+  line-height: 113%;
+  text-transform: uppercase;
+
+  @include adaptiveScreenFrom(tablet) {
+    font-size: 20px;
+  }
+}
+
+.field__control {
+  grid-column: -1 / -2;
+  grid-row: 1 / 2;
+
+  box-sizing: border-box;
+
+  display: inline-flex;
+
+  width: 100%;
+  padding: 14px 37px 13px 15px;
+
+  color: $text-color-basic-2;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 113%;
+  text-transform: uppercase;
+
+  border: none;
+  cursor: pointer;
+
+  outline: 1px solid $border-color-base-light-2;
+  outline-offset: -1px;
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &:hover {
+    outline-color: $border-color-base-2;
+  }
+
+  &:focus {
+    outline-color: $border-color-base-dark;
+    outline-width: 2px;
+    outline-offset: -2px;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    cursor: not-allowed;
+  }
+
+  &:user-invalid {
+    outline-color: $border-color-error;
+    outline-width: 2px;
+    outline-offset: -2px;
+  }
+
+  @include adaptiveScreenFrom(tablet) {
+    padding: 11px 40px 11px 20px;
+
+    font-size: 20px;
+  }
+}
+
+.field__control--error {
+  outline-color: $border-color-error;
+  outline-width: 2px;
+  outline-offset: -2px;
+
+  &:hover,
+  &:focus {
+    outline-color: $border-color-error;
+  }
+}

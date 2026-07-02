@@ -1,5 +1,11 @@
 // $font-family: "Oswald", sans-serif;
 // $second-family: "Lato", sans-serif;
+$BREAK_POINTS: (
+  "mobile-only": 747px,
+  "tablet": 748px,
+  "desktop": 1260px,
+);
+
 
 $font-family: "Lato", sans-serif;
 $second-family: "Oswald", sans-serif;
@@ -39,10 +45,13 @@ $bg-color-accent: #ffffff;
 $border-color-base: #e6e6e6;
 $border-color-base-2: #cdcdcd; // special-grey
 $border-color-base-3: #d9d9d9;
+$border-color-base-4: #bababa;
 $border-color-base-light: #f2f2f2;
 $border-color-base-light-2: #e7e7e7;
+
 $border-color-base-dark: #444444;
 $border-color-error: #ff8282;
 
 $bg-color-icon: #666666;
 $bg-color-icon-hover: #68b738;
+$bg-color-icon-dark: #222222;

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @mixin fontFace($fontFamily, $fontWeight, $fontStyle, $fontSrc) {
   @font-face {
     font-family: $fontFamily;
@@ -5,5 +7,21 @@
     font-style: $fontStyle;
     font-display: swap;
     src: $fontSrc;
+  }
+}
+
+@mixin adaptiveScreenFrom($screenType) {
+  $BREAK_POINT: map.get($BREAK_POINTS, $screenType);
+
+  @media (min-width: $BREAK_POINT) {
+    @content;
+  }
+}
+
+@mixin adaptiveScreenTo($screenType) {
+  $BREAK_POINT: map.get($BREAK_POINTS, $screenType);
+
+  @media (max-width: $BREAK_POINT) {
+    @content;
   }
 }

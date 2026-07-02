@@ -1,0 +1,11 @@
+.slider {
+  background-color: rgba(pink, 0.3);
+
+  @include adaptiveScreenFrom(tablet) {
+    background-color: rgba(green, 0.3);
+  }
+
+  @include adaptiveScreenFrom(desktop) {
+    background-color: rgba(red, 0.3);
+  }
+}

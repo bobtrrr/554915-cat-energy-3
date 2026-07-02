@@ -1,0 +1,65 @@
+.radio-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 113%;
+  text-transform: uppercase;
+  color: inherit;
+
+  cursor: pointer;
+
+  @include adaptiveScreenFrom(tablet) {
+    gap: 20px;
+
+    font-size: 20px;
+  }
+}
+
+.radio-control::before {
+  content: "";
+
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 100%;
+  outline: 1px solid $border-color-base-2;
+  outline-offset: -1px;
+
+  @include adaptiveScreenFrom(tablet) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.radio-control:has(.radio-control__input:checked)::before {
+  background-image: url("./../../icons/icon-radio.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 13px;
+  background-position: center;
+
+  @include adaptiveScreenFrom(tablet) {
+    background-size: 18px 18px;
+  }
+}
+
+.radio-control:hover::before,
+.radio-control:has(.radio-control__input:focus-visible)::before {
+  outline-color: $border-color-base-4;
+}
+
+.radio-control:has(.radio-control__input:active) {
+  opacity: 0.3;
+}
+
+.radio-control__input {
+  position: absolute;
+
+  appearance: none;
+}
+
