@@ -11,6 +11,7 @@
   <link rel="manifest" href="./site.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
+  <script src="scripts/slider.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -34,10 +35,10 @@
           <a class="site-nav__link site-nav__link--active" href="#">главная</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="#">каталог продукции</a>
+          <a class="site-nav__link" href="catalog.html">каталог продукции</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="#">подбор программы</a>
+          <a class="site-nav__link" href="form.html">подбор программы</a>
         </li>
       </ul>
 
@@ -148,7 +149,19 @@
         </div>
 
         <div class="result__slider slider">
+          <picture class="slider__image-container slider__image-container--before">
+            <source media="(min-width: 748px)" srcset="images/slide-before-tablet@1x.png 1x, images/slide-before-tablet@2x.png 2x" width="560" height="512" type="image/png">
+            <img class="slider__image" src="images/slide-before-mobile@1x.png" srcset="images/slide-before-mobile@2x.png 2x" width="280" height="256" alt="До применения диеты" draggable="false">
+          </picture>
 
+          <picture class="slider__image-container slider__image-container--after">
+            <source media="(min-width: 748px)" srcset="images/slide-after-tablet@1x.png 1x, images/slide-after-tablet@2x.png 2x" width="560" height="512" type="image/png">
+            <img class="slider__image" src="images/slide-after-mobile@1x.png" srcset="images/slide-after-mobile@2x.png 2x" width="280" height="256" alt="После применения диеты" draggable="false">
+          </picture>
+
+          <button class="slider__button slider-button" type="button">
+            <span class="visually-hidden">Сравнить фотографии</span>
+          </button>
         </div>
       </div>
     </section>

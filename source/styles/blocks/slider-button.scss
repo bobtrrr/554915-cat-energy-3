@@ -1,0 +1,65 @@
+.slider-button {
+  position: relative;
+
+  width: 4px;
+  height: 100%;
+  padding: 0;
+
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  background-color: $border-color-base-2;
+
+  cursor: e-resize;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $bg-color-special;
+
+
+    &::after {
+      outline-color: $bg-color-special;
+    }
+  }
+
+  &:active {
+    background-color: rgba($bg-color-special, 0.6);
+
+    &::after {
+      outline-color: rgba($bg-color-special, 0.6);
+    }
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: calc(50% - 20px);
+    left: -18px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: $bg-color-accent;
+    outline: 2px solid $border-color-base-2;
+    outline-offset: -2px;
+    border-radius: 100%;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: 5;
+    top: calc(50% - 9px);
+    left: calc(50% - 12px);
+
+    width: 24px;
+    height: 18px;
+
+    mask-image: url("./../../icons/slider-button.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: inherit;
+  }
+}
