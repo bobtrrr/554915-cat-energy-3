@@ -9,15 +9,13 @@
   font-size: 14px;
   line-height: 129%;
   color: $text-color-basic-2;
-
-  @media (min-width: $tablet-width) {
-    // font-size: 16px;
-    // line-height: 150%;
-  }
 }
 
 .page__hero {
   @media (min-width: $desktop-width) {
+    position: relative;
+    z-index: -5;
+
     margin-top: -142px;
   }
 }
