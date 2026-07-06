@@ -16,6 +16,10 @@
   border: none;
   resize: vertical;
 
+  &::placeholder {
+    color: inherit;
+  }
+
   @include adaptiveScreenFrom(tablet) {
     padding: 11px 20px;
 
