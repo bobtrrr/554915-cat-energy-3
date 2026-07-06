@@ -1,4 +1,5 @@
 .slider {
+  --slider-button-width: 4px;
   --slide-pos: 50%;
 
   position: relative;
@@ -34,5 +35,5 @@
 .slider__button {
   position: absolute;
   top: 0;
-  left: var(--slide-pos);
+  left: calc(var(--slide-pos) - var(--slider-button-width));
 }
