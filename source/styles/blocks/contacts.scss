@@ -25,6 +25,9 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 163px 167px;
 
+    position: relative;
+    z-index: 2;
+
     box-sizing: border-box;
     width: 565px;
     padding-left: 80px;
@@ -83,9 +86,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
 
     height: 100%;
+  }
+}
+
+.contacts__ya-map {
+  width: 100%;
+  height: 362px;
+
+  @include adaptiveScreenFrom(tablet) {
+    height: 400px;
   }
 }
 
