@@ -1,6 +1,13 @@
 const navButton = document.querySelector('.main-nav__toggle');
 const navList = document.querySelector('.main-nav__site-nav');
 
+const mainNav = document.querySelector('.main-nav');
+const isAvailableJS = mainNav.classList.contains('main-nav--nojs');
+
+if (isAvailableJS) {
+  mainNav.classList.remove('main-nav--nojs');
+}
+
 
 const toggleMenu = () => {
   navButton.addEventListener('click', () => {
