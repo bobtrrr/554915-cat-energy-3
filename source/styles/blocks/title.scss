@@ -1,0 +1,59 @@
+.title {
+  margin: 0;
+  width: fit-content;
+
+  color: $text-color-basic;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+
+  @include adaptiveScreenFrom(tablet) {
+    font-size: 32px;
+  }
+
+  @include adaptiveScreenFrom(desktop) {
+    font-size: 40px;
+  }
+}
+
+.title--decorative-line {
+  position: relative;
+
+  background-color: $bg-color-accent;
+  box-shadow: -40px 0 $bg-color-accent, 40px 0 $bg-color-accent;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 45%;
+    right: 0;
+    z-index: -1;
+
+    height: 2px;
+    width: 100vw;
+
+    box-shadow: 100vw 0 $bg-color-special;
+
+    @include adaptiveScreenFrom(tablet) {
+      background-color: $bg-color-special;
+    }
+  }
+}
+
+.title--size-m {
+  font-size: 24px;
+
+  @include adaptiveScreenFrom(tablet) {
+    font-size: 36px;
+  }
+}
+
+.title--size-l {
+  font-size: 36px;
+
+  @include adaptiveScreenFrom(tablet) {
+    font-size: 60px;
+  }
+}

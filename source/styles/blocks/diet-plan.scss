@@ -29,19 +29,10 @@
 }
 
 .diet-plan__title {
-  margin: 0;
   margin-bottom: 38px;
-
-  font-family: $second-family;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 100%;
-  color: $text-color-basic;
 
   @include adaptiveScreenFrom(tablet) {
     margin-bottom: 54px;
-
-    font-size: 60px;
   }
 }
 

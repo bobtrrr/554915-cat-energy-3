@@ -14,14 +14,7 @@
 }
 
 .newsletters__title {
-  margin: 0;
   margin-bottom: 32px;
-
-  font-family: $second-family;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 100%;
-  color: $text-color-basic;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 66px;

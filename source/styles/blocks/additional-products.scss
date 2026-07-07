@@ -34,18 +34,14 @@
 }
 
 .additional-products__title {
-  margin: 0;
-
-  font-family: $second-family;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 100%;
-  color: $text-color-basic;
-
-  @media (min-width: $tablet-width) {
-    font-size: 32px;
+  @include adaptiveScreenFrom(tablet) {
+    margin-left: 40px;
+  }
+  @include adaptiveScreenFrom(desktop) {
+    margin-left: 0;
   }
 }
+
 
 .additional-products__list {
   grid-area: list;

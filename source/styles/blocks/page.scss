@@ -39,16 +39,3 @@
   }
 }
 
-.page__heading-title {
-  margin: 0;
-
-  font-family: $second-family;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 100%;
-  color: $text-color-basic;
-
-  @media (min-width: $tablet-width) {
-    font-size: 60px;
-  }
-}
