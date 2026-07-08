@@ -1,12 +1,16 @@
+
 .toggle-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+
+  width: 24px;
+  height: 18px;
 
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
   border: none;
+
+  transform: translateY(-2px) translateX(-1px);
 
   &:hover,
   &:focus-visible {
@@ -17,22 +21,59 @@
     opacity: 0.6;
   }
 
-  &::before {
-    content: "";
+  &__line {
+    position: absolute;
+    left: 0;
 
-    width: 24px;
-    height: 24px;
+    display: block;
+    width: 100%;
+    height: 2px;
 
-    background-image: url("./../../icons/toggle-button-closed.svg");
-    background-repeat: no-repeat;
+    background-color: #000000;
+    opacity: 1;
+
+    transition: 0.3s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0;
+
+      transition-duration: 0.1s;
+    }
+
+    &:nth-child(2) {
+      top: 8px;
+    }
+
+    &:nth-child(3) {
+      top: 8px;
+    }
+
+    &:nth-child(4) {
+      bottom: 0;
+
+      transition-duration: 0.1s;
+    }
   }
 }
 
 .toggle-button--opened {
-  &::before {
-    width: 18px;
-    height: 18px;
+  transform: rotate(90deg) translateY(-3px) translateX(-2px);
+}
 
-    background-image: url("./../../icons/toggle-button-opened.svg");
+.toggle-button--opened .toggle-button__line {
+  &:nth-child(1) {
+    transform: scale(0);
+  }
+
+  &:nth-child(2) {
+    transform: rotate(43deg);
+  }
+
+  &:nth-child(3) {
+    transform: rotate(-44deg);
+  }
+
+  &:nth-child(4) {
+    transform: scale(0);
   }
 }
