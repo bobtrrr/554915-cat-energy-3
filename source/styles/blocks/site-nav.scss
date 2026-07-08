@@ -20,7 +20,7 @@
     background-color: $bg-color-accent;
 
     transform: translateY(-150%);
-    transition: transform 0.2s ease, opacity 0.1s ease, visibility 0.1s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
 
     &::before {
       content: "";
