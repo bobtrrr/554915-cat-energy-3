@@ -4,14 +4,24 @@ const navList = document.querySelector('.main-nav__site-nav');
 const mainNav = document.querySelector('.main-nav');
 const isAvailableJS = mainNav.classList.contains('main-nav--nojs');
 
-if (isAvailableJS) {
-  mainNav.classList.remove('main-nav--nojs');
-}
+const checkAvailableJS = () => {
+  if (isAvailableJS) {
+    mainNav.classList.remove('main-nav--nojs');
+    mainNav.querySelector('.main-nav__site-nav').classList.remove('site-nav--opened');
+  }
+};
 
+checkAvailableJS();
+
+const TOGGLE_TEXT = {
+  OPENED: 'Открыть меню',
+  CLOSED: 'Закрыть меню',
+};
 
 const toggleMenu = () => {
   navButton.addEventListener('click', () => {
     navButton.classList.toggle('toggle-button--opened');
+    navButton.ariaLabel = navButton.ariaLabel === TOGGLE_TEXT.OPENED ? TOGGLE_TEXT.CLOSED : TOGGLE_TEXT.OPENED;
     navList.classList.toggle('site-nav--opened');
   });
 };
