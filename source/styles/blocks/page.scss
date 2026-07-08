@@ -13,9 +13,6 @@
 
 .page__hero {
   @media (min-width: $desktop-width) {
-    position: relative;
-    z-index: -5;
-
     margin-top: -142px;
   }
 }
