@@ -15,7 +15,7 @@
 
 <body class="page__body">
   <header class="page__header page-header container">
-    <nav class="page-header__nav main-nav">
+    <nav class="page-header__nav main-nav main-nav--nojs">
 
       <div class="main-nav__top">
         <a class="main-nav__logo logo" href="#" aria-label="Логотип Cat Energy">
@@ -26,10 +26,15 @@
           </picture>
         </a>
 
-        <button class="main-nav__toggle toggle-button" aria-expanded="false" aria-label="Открыть меню" type="button"></button>
+        <button class="main-nav__toggle toggle-button" aria-expanded="false" aria-label="Открыть меню" type="button">
+          <span class="toggle-button__line"></span>
+          <span class="toggle-button__line"></span>
+          <span class="toggle-button__line"></span>
+          <span class="toggle-button__line"></span>
+        </button>
       </div>
 
-      <ul class="main-nav__site-nav site-nav">
+      <ul class="main-nav__site-nav site-nav site-nav--opened">
         <li class="site-nav__item">
           <a class="site-nav__link" href="index.html">главная</a>
         </li>
