@@ -11,23 +11,33 @@
 
 .main-nav__top {
   @media (max-width: $mobile-width-only) {
+    position: relative;
+    z-index: 20;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
 
-    padding-bottom: 14px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    background-color: $bg-color-accent;
   }
 }
 
 .main-nav__logo {
   flex-shrink: 0;
+
+  @include adaptiveScreenTo(mobile-only) {
+    margin-top: 3px;
+  }
 }
 
 .main-nav__toggle {
-  @media (min-width: $tablet-width) {
-    flex-shrink: 0;
+  flex-shrink: 0;
 
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
@@ -37,9 +47,11 @@
 
   @media (max-width: $mobile-width-only) {
     position: absolute;
-    top: 56px;
+    top: 70px;
     left: 0;
     right: 0;
+
+    z-index: 10;
   }
 
   @media (min-width: $tablet-width) {
@@ -62,7 +74,6 @@
 .main-nav--nojs .main-nav__site-nav {
   @media (max-width: $mobile-width-only) {
     position: static;
-    display: flex;
   }
 }
 
