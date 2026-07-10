@@ -58,4 +58,3 @@ const changeSiteNavTheme = () => {
 };
 
 export const initCangeSiteNavTheme = () => changeSiteNavTheme();
-

@@ -23,7 +23,7 @@
   }
 }
 
-.additional_products__headline {
+.additional-products__headline {
   grid-area: title;
 
   margin-bottom: 35px;
@@ -37,6 +37,7 @@
   @include adaptiveScreenFrom(tablet) {
     margin-left: 40px;
   }
+
   @include adaptiveScreenFrom(desktop) {
     margin-left: 0;
   }
