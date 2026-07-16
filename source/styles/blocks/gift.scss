@@ -11,6 +11,8 @@
   background-image:
     linear-gradient($bg-color-special-3, $bg-color-special-3),
     image-set(
+      url("./../../images/gift-mobile@2x.webp") 2x,
+      url("./../../images/gift-mobile@1x.webp") 1x,
       url("./../../images/gift-mobile@2x.jpg") 2x,
       url("./../../images/gift-mobile@1x.jpg") 1x,
     );
@@ -42,6 +44,8 @@
     background-image:
       linear-gradient($bg-color-special-3, $bg-color-special-3),
       image-set(
+        url("./../../images/gift-tablet@2x.webp") 2x,
+        url("./../../images/gift-tablet@1x.webp") 1x,
         url("./../../images/gift-tablet@2x.jpg") 2x,
         url("./../../images/gift-tablet@1x.jpg") 1x,
       );
@@ -58,6 +62,8 @@
     background-image:
       linear-gradient($bg-color-special-3, $bg-color-special-3),
       image-set(
+        url("./../../images/gift-desktop@2x.webp") 2x,
+        url("./../../images/gift-desktop@1x.webp") 1x,
         url("./../../images/gift-desktop@2x.jpg") 2x,
         url("./../../images/gift-desktop@1x.jpg") 1x,
       );

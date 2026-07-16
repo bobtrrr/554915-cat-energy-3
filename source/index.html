@@ -5,6 +5,23 @@
   <meta charset="UTF-8">
   <title>Главная страница | Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- HERO BG -->
+  <link rel="preload" media="(max-width: 747px)" imagesrcset="./images/hero-bg-mobile@1x.webp 1x, ./images/hero-bg-mobile@2x.webp 2x" as="image" fetchpriority="high">
+  <link rel="preload" media="(min-width: 1260px)" imagesrcset="./images/hero-bg-desktop@1x.webp 1x, ./images/hero-bg-desktop@2x.webp 2x" as="image" fetchpriority="high">
+
+  <!-- HERO IMG -->
+  <link rel="preload" media="(min-width: 1260px)" imagesrcset="./images/hero-desktop@1x.webp 1x, ./images/hero-desktop@2x.webp 2x" as="image" fetchpriority="high">
+  <link rel="preload" media="(min-width: 748px) and (max-width: 1259px)" imagesrcset="./images/hero-tablet@1x.webp 1x, ./images/hero-tablet@2x.webp 2x" as="image" fetchpriority="high">
+  <link rel="preload" media="(max-width: 747px)" imagesrcset="./images/hero-mobile@1x.webp 1x, ./images/hero-mobile@2x.webp 2x" as="image" fetchpriority="high">
+
+  <!-- LOGO -->
+  <link rel="preload" media="(min-width: 1260px)" href="images/logo-desktop.svg" as="image" fetchpriority="high">
+  <link rel="preload" media="(min-width: 748px) and (max-width: 1259px)" href="images/logo-tablet.svg" as="image" fetchpriority="high">
+  <link rel="preload" media="(max-width: 747px)" href="images/logo-mobile.svg" as="image" fetchpriority="high">
+
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
   <link rel="icon" href="./favicon.ico" sizes="48x48 32x32 16x16">
   <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
@@ -66,9 +83,14 @@
         </div>
 
         <picture class="hero__image-wrapper">
+          <source media="(min-width: 1260px)" srcset="images/hero-desktop@1x.webp 1x, images/hero-desktop@2x.webp 2x" width="552" height="499" type="image/webp">
           <source media="(min-width: 1260px)" srcset="images/hero-desktop@1x.png 1x, images/hero-desktop@2x.png 2x" width="552" height="499" type="image/png">
+
+          <source media="(min-width: 748px)" srcset="images/hero-tablet@1x.webp 1x, images/hero-tablet@2x.webp 2x" width="709" height="609" type="image/webp">
           <source media="(min-width: 748px)" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x" width="709" height="609" type="image/png">
-          <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Cat Energy Pro С курицей">
+
+          <source srcset="images/hero-mobile@1x.webp 1x, images/hero-mobile@2x.webp 2x" type="image/webp">
+          <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Cat Energy Pro С курицей" fetchpriority="high">
         </picture>
       </div>
     </section>
@@ -158,13 +180,23 @@
 
         <div class="result__slider slider">
           <picture class="slider__image-container slider__image-container--before">
+            <!-- tablet -->
+            <source media="(min-width: 748px)" srcset="images/slide-before-tablet@1x.webp 1x, images/slide-before-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
             <source media="(min-width: 748px)" srcset="images/slide-before-tablet@1x.png 1x, images/slide-before-tablet@2x.png 2x" width="560" height="512" type="image/png">
-            <img class="slider__image" src="images/slide-before-mobile@1x.png" srcset="images/slide-before-mobile@2x.png 2x" width="280" height="256" alt="До применения диеты" draggable="false">
+
+            <!-- mobile -->
+            <source srcset="images/slide-before-mobile@1x.webp 1x, images/slide-before-mobile@2x.webp 2x" width="280" height="256" type="image/webp">
+            <img class="slider__image" src="images/slide-before-mobile@1x.png" srcset="images/slide-before-mobile@2x.png 2x" width="280" height="256" alt="До применения диеты" draggable="false" loading="lazy">
           </picture>
 
           <picture class="slider__image-container slider__image-container--after">
+            <!-- tablet -->
+            <source media="(min-width: 748px)" srcset="images/slide-after-tablet@1x.webp 1x, images/slide-after-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
             <source media="(min-width: 748px)" srcset="images/slide-after-tablet@1x.png 1x, images/slide-after-tablet@2x.png 2x" width="560" height="512" type="image/png">
-            <img class="slider__image" src="images/slide-after-mobile@1x.png" srcset="images/slide-after-mobile@2x.png 2x" width="280" height="256" alt="После применения диеты" draggable="false">
+
+            <!-- mobile -->
+            <source srcset="images/slide-after-mobile@1x.webp 1x, images/slide-after-mobile@2x.webp 2x" width="280" height="256" type="image/webp">
+            <img class="slider__image" src="images/slide-after-mobile@1x.png" srcset="images/slide-after-mobile@2x.png 2x" width="280" height="256" alt="После применения диеты" draggable="false" loading="lazy">
           </picture>
 
           <button class="slider__button slider-button" type="button">
@@ -192,9 +224,17 @@
 
     <div class="contacts__map-container">
       <picture class="contacts__image-container">
+        <!-- desktop -->
+        <source media="(min-width: 1260px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="400" type="image/webp">
         <source media="(min-width: 1260px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x" width="1440" height="400" type="image/jpg">
+
+        <!-- tablet -->
+        <source media="(min-width: 748px)" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="768" height="400" type="image/webp">
         <source media="(min-width: 748px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x" width="768" height="400" type="image/jpg">
-        <img class="contacts__map-image" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Офис компании по ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+
+        <!-- mobile -->
+        <source srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="320" height="362" type="image/webp">
+        <img class="contacts__map-image" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Офис компании по ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" loading="lazy">
       </picture>
     </div>
   </section>

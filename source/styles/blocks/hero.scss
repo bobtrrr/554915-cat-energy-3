@@ -4,6 +4,8 @@
       rgba(104, 183, 56, 0.85) 0% 60%,
       #ffffff 60% 100%),
     image-set(
+        url("./../../images/hero-bg-mobile@2x.webp") 2x,
+        url("./../../images/hero-bg-mobile@1x.webp") 1x,
         url("./../../images/hero-bg-mobile@2x.png") 2x,
         url("./../../images/hero-bg-mobile@1x.png") 1x
       ),
@@ -30,6 +32,8 @@
         rgba(104, 183, 56, 0.85) 50% 100%,
       ),
       image-set(
+        url("./../../images/hero-bg-desktop@2x.webp") 2x,
+        url("./../../images/hero-bg-desktop@1x.webp") 1x,
         url("./../../images/hero-bg-desktop@2x.png") 2x,
         url("./../../images/hero-bg-desktop@1x.png") 1x
       ),
