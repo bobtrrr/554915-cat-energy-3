@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
     myMap.geoObjects.add(myPlacemark);
-  });
 
+    const yaLink = document.querySelector('.ymaps-2-1-79-copyright__logo');
+    yaLink.ariaLabel = 'Янедкс.Карты';
+  });
 });
