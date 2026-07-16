@@ -11,14 +11,24 @@
   <link rel="preload" media="(min-width: 748px) and (max-width: 1259px)" href="images/logo-tablet.svg" as="image" fetchpriority="high">
   <link rel="preload" media="(max-width: 747px)" href="images/logo-mobile.svg" as="image" fetchpriority="high">
 
+  <!-- FONTS -->
   <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+  <!-- SCRIPTS -->
+  <link rel="preload" href="scripts/index.js" as="script">
+
+  <!-- ICONS -->
   <link rel="icon" href="./favicon.ico" sizes="48x48 32x32 16x16">
   <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
+
   <link rel="stylesheet" href="styles/styles.css">
+
   <script src="scripts/index.js" defer></script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=17fad1a8-510c-43ff-9aba-42f5842ea754&lang=ru_RU" defer></script>
+  <script src="scripts/map.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -34,7 +44,7 @@
           </picture>
         </a>
 
-        <button class="main-nav__toggle toggle-button" aria-expanded="false" aria-label="Открыть меню" type="button">
+        <button class="main-nav__toggle toggle-button" aria-expanded="false" aria-label="Открыть меню" aria-controls="site-nav" type="button">
           <span class="toggle-button__line"></span>
           <span class="toggle-button__line"></span>
           <span class="toggle-button__line"></span>
@@ -42,7 +52,7 @@
         </button>
       </div>
 
-      <ul class="main-nav__site-nav site-nav site-nav--opened">
+      <ul class="main-nav__site-nav site-nav site-nav--opened" id="site-nav">
         <li class="site-nav__item">
           <a class="site-nav__link" href="index.html">главная</a>
         </li>
@@ -96,7 +106,7 @@
             </div>
           </dl>
 
-          <a class="product-preview__button button button--primary button--size-m" href="#">заказать</a>
+          <a class="product-preview__button button button--primary button--size-m" href="#" aria-label="Заказать Cat Energy PRO 500 г">заказать</a>
         </li>
 
         <li class="catalog__item product-preview">
@@ -131,7 +141,7 @@
             </div>
           </dl>
 
-          <a class="product-preview__button button button--primary button--size-m" href="#">заказать</a>
+          <a class="product-preview__button button button--primary button--size-m" href="#" aria-label="Заказать Cat Energy PRO 1000 г">заказать</a>
         </li>
 
         <li class="catalog__item product-preview">
@@ -164,7 +174,7 @@
             </div>
           </dl>
 
-          <a class="product-preview__button button button--primary button--size-m" href="#">заказать</a>
+          <a class="product-preview__button button button--primary button--size-m" href="#" aria-label="Заказать Cat Energy PRO 500 г">заказать</a>
         </li>
 
         <li class="catalog__item product-preview">
@@ -199,7 +209,7 @@
             </div>
           </dl>
 
-          <a class="product-preview__button button button--primary button--size-m" href="#">заказать</a>
+          <a class="product-preview__button button button--primary button--size-m" href="#" aria-label="Заказать Cat Energy PRO 1000 г">заказать</a>
         </li>
 
         <li class="catalog__item product-preview">
@@ -232,7 +242,7 @@
             </div>
           </dl>
 
-          <a class="product-preview__button button button--primary button--size-m" href="#">заказать</a>
+          <a class="product-preview__button button button--primary button--size-m" href="#" aria-label="Заказать Cat Energy slim 500 г">заказать</a>
         </li>
 
         <li class="catalog__item product-preview">
@@ -268,7 +278,7 @@
             </div>
           </dl>
 
-          <a class="product-preview__button button button--primary button--size-m" href="#">заказать</a>
+          <a class="product-preview__button button button--primary button--size-m" href="#" aria-label="Заказать Cat Energy slim 1000 г">заказать</a>
         </li>
 
         <li class="catalog__item product-preview">
@@ -278,7 +288,7 @@
               <source srcset="images/catalog-7-mobile@1x.webp 1x, images/catalog-7-mobile@2x.webp 2x" type="image/webp">
 
               <source media="(min-width: 748px)" srcset="images/catalog-7-tablet@1x.png 1x, images/catalog-7-tablet@2x.png 2x" width="163" height="174" type="image/png">
-              <img class="product-preview__image" src="images/catalog-7-mobile@1x.png" srcset="images/catalog-7-mobile@2x.png 2x" width="72" height="84" alt="Cat Energy slim 500 г, вкус рис">
+              <img class="product-preview__image" src="images/catalog-7-mobile@1x.png" srcset="images/catalog-7-mobile@2x.png 2x" width="72" height="84" alt="Cat Energy slim 500 г">
             </picture>
           </a>
 
@@ -301,13 +311,13 @@
             </div>
           </dl>
 
-          <a class="product-preview__button button button--primary button--size-m" href="#">заказать</a>
+          <a class="product-preview__button button button--primary button--size-m" href="#" aria-label="Заказать Cat Energy slim 500 г">заказать</a>
         </li>
 
         <li class="catalog__item product-empty">
           <h3 class="product-empty__title">Показать еще 100500 товаров</h3>
           <p class="product-empty__description">На самом деле вкусов гораздо больше!</p>
-          <a class="product-empty__button button button--secondary button--size-m" href="#">показать все</a>
+          <a class="product-empty__button button button--secondary button--size-m" href="#">показать все <span class="visually-hidden">товары</span></a>
         </li>
       </ul>
     </section>
@@ -332,7 +342,7 @@
             </div>
           </dl>
 
-          <button class="additional-product__button button button--primary button--size-m" type="button">заказать</button>
+          <button class="additional-product__button button button--primary button--size-m" type="button" aria-label="Заказать Сахарозаменитель">заказать</button>
         </li>
         <li class="additional-products__item additional-product">
           <h3 class="additional-product__title">Питьевая вода</h3>
@@ -348,7 +358,7 @@
             </div>
           </dl>
 
-          <button class="additional-product__button button button--primary button--size-m" type="button">заказать</button>
+          <button class="additional-product__button button button--primary button--size-m" type="button" aria-label="Заказать Питьевая вода">заказать</button>
         </li>
         <li class="additional-products__item additional-product">
           <h3 class="additional-product__title">Молоко</h3>
@@ -364,7 +374,7 @@
             </div>
           </dl>
 
-          <button class="additional-product__button button button--primary button--size-m" type="button">заказать</button>
+          <button class="additional-product__button button button--primary button--size-m" type="button" aria-label="Заказать Молоко">заказать</button>
         </li>
         <li class="additional-products__item additional-product">
           <h3 class="additional-product__title">Витамины</h3>
@@ -380,7 +390,7 @@
             </div>
           </dl>
 
-          <button class="additional-product__button button button--primary button--size-m" type="button">заказать</button>
+          <button class="additional-product__button button button--primary button--size-m" type="button" aria-label="Заказать Витамины">заказать</button>
         </li>
       </ul>
 
@@ -412,8 +422,8 @@
     </section>
   </main>
 
-  <section class="contacts">
-    <h2 class="visually-hidden">Контакты</h2>
+  <section class="contacts" aria-labelledby="contacts-title">
+    <h2 class="visually-hidden" id="contacts-title">Контакты</h2>
 
     <div class="contacts__content-wrapper container">
       <div class="contacts__content">
@@ -445,8 +455,10 @@
 
   <footer class="page__footer page-footer">
     <div class="page-footer__wrapper container">
-      <a class="page-footer__logo logo-secondary" href="#" aria-label="Логотип Cat Energy">
-        <svg class="logo-secondary__icon" width="128" height="24">
+      <a class="page-footer__logo logo-secondary" href="#">
+        <span class="visually-hidden">Cat Energy - Главная страница</span>
+
+        <svg class="logo-secondary__icon" width="128" height="24" aria-hidden="true">
           <use href="./icons/stack.svg#logo-secondary"></use>
         </svg>
       </a>
@@ -461,7 +473,7 @@
         </li>
         <li class="social__item">
           <a class="social__link social__link--icon-youtube" href="#">
-            <span class="visually-hidden">Youtuebe</span>
+            <span class="visually-hidden">Youtube</span>
           </a>
         </li>
         <li class="social__item">
@@ -473,8 +485,7 @@
 
       <span class="page-footer__line"></span>
 
-      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="visually-hidden">Создано на курсе по вёрстке от</span>
+      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Курс HTMLAcademy. Адаптивная вёрстка и автоматизация">
         <span class="page-footer__link-caption">HTML Academy</span>
       </a>
     </div>

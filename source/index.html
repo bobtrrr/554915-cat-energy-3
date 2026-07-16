@@ -20,18 +20,25 @@
   <link rel="preload" media="(min-width: 748px) and (max-width: 1259px)" href="images/logo-tablet.svg" as="image" fetchpriority="high">
   <link rel="preload" media="(max-width: 747px)" href="images/logo-mobile.svg" as="image" fetchpriority="high">
 
+  <!-- FONTS -->
   <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+  <!-- SCRIPTS -->
+  <link rel="preload" href="scripts/index.js" as="script">
+
+  <!-- ICONS -->
   <link rel="icon" href="./favicon.ico" sizes="48x48 32x32 16x16">
   <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
+
   <link rel="stylesheet" href="styles/styles.css">
+
   <script src="scripts/index.js" defer></script>
   <script src="scripts/slider.js" defer></script>
+
   <script src="https://api-maps.yandex.ru/2.1/?apikey=17fad1a8-510c-43ff-9aba-42f5842ea754&lang=ru_RU" defer></script>
   <script src="scripts/map.js" defer></script>
-
 </head>
 
 <body class="page__body">
@@ -47,7 +54,7 @@
           </picture>
         </a>
 
-        <button class="main-nav__toggle toggle-button" aria-expanded="false" aria-label="Открыть меню" type="button">
+        <button class="main-nav__toggle toggle-button" aria-expanded="false" aria-label="Открыть меню" aria-controls="site-nav" type="button">
           <span class="toggle-button__line"></span>
           <span class="toggle-button__line"></span>
           <span class="toggle-button__line"></span>
@@ -55,7 +62,7 @@
         </button>
       </div>
 
-      <ul class="main-nav__site-nav site-nav site-nav--opened">
+      <ul class="main-nav__site-nav site-nav site-nav--opened" id="site-nav">
         <li class="site-nav__item">
           <a class="site-nav__link site-nav__link--active" href="#">главная</a>
         </li>
@@ -90,7 +97,7 @@
           <source media="(min-width: 748px)" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x" width="709" height="609" type="image/png">
 
           <source srcset="images/hero-mobile@1x.webp 1x, images/hero-mobile@2x.webp 2x" type="image/webp">
-          <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Cat Energy Pro С курицей" fetchpriority="high">
+          <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="" fetchpriority="high">
         </picture>
       </div>
     </section>
@@ -106,13 +113,13 @@
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
           <span class="diet-card__line"></span>
-          <a class="diet-card__link" href="#">каталог slim</a>
+          <a class="diet-card__link" href="#" aria-label="Питание для похудения">каталог slim</a>
         </li>
         <li class="diet__item diet-card diet-card--weight-gain">
           <h3 class="diet-card__title">набор массы</h3>
           <p class="diet-card__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <span class="diet-card__line"></span>
-          <a class="diet-card__link" href="#">каталог pro</a>
+          <a class="diet-card__link" href="#" aria-label="Питание для набора массы">каталог pro</a>
         </li>
       </ul>
     </section>
@@ -208,8 +215,8 @@
 
   </main>
 
-  <section class="contacts">
-    <h2 class="visually-hidden">Контакты</h2>
+  <section class="contacts" aria-labelledby="contacts-title">
+    <h2 class="visually-hidden" id="contacts-title">Контакты</h2>
 
     <div class="contacts__content-wrapper container">
       <div class="contacts__content">
@@ -241,8 +248,10 @@
 
   <footer class="page__footer page-footer">
     <div class="page-footer__wrapper container">
-      <a class="page-footer__logo logo-secondary" href="#" aria-label="Логотип Cat Energy">
-        <svg class="logo-secondary__icon" width="128" height="24">
+      <a class="page-footer__logo logo-secondary" href="#">
+        <span class="visually-hidden">Cat Energy - Главная страница</span>
+
+        <svg class="logo-secondary__icon" width="128" height="24" aria-hidden="true">
           <use href="./icons/stack.svg#logo-secondary"></use>
         </svg>
       </a>
@@ -269,8 +278,7 @@
 
       <span class="page-footer__line"></span>
 
-      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="visually-hidden">Создано на курсе по вёрстке от</span>
+      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Курс HTMLAcademy. Адаптивная вёрстка и автоматизация">
         <span class="page-footer__link-caption">HTML Academy</span>
       </a>
     </div>

@@ -22,6 +22,10 @@ const toggleMenu = () => {
   navButton.addEventListener('click', () => {
     navButton.classList.toggle('toggle-button--opened');
     navButton.ariaLabel = navButton.ariaLabel === TOGGLE_TEXT.OPENED ? TOGGLE_TEXT.CLOSED : TOGGLE_TEXT.OPENED;
+
+    const isExpanded = navButton.ariaExpanded === 'true';
+    navButton.ariaExpanded = !isExpanded;
+
     navList.classList.toggle('site-nav--opened');
   });
 };
