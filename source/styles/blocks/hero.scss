@@ -1,8 +1,8 @@
 .hero {
   background-image:
     linear-gradient(
-      rgba(104, 183, 56, 0.85) 0% 60%,
-      #ffffff 60% 100%),
+      rgba(104, 183, 56, 0.85) 0% 60.5%,
+      #ffffff 60.5% 100%),
     image-set(
         url("./../../images/hero-bg-mobile@2x.webp") 2x,
         url("./../../images/hero-bg-mobile@1x.webp") 1x,
@@ -10,9 +10,11 @@
         url("./../../images/hero-bg-mobile@1x.png") 1x
       ),
     linear-gradient(
-        #404044 0% 60%,
-        #ffffff 60% 100%,
+        to right,
+        #515160 0% 30%,
+        #404044 30% 100%
       );
+
   background-size:
     auto,
     320px 302px,
@@ -28,8 +30,8 @@
     background-image:
       linear-gradient(
         to right,
-        #ffffff 0% 50%,
-        rgba(104, 183, 56, 0.85) 50% 100%,
+        #ffffff 0% 50.02%,
+        rgba(104, 183, 56, 0.85) 50.02% 100%,
       ),
       image-set(
         url("./../../images/hero-bg-desktop@2x.webp") 2x,
@@ -44,7 +46,7 @@
       );
     background-position:
       top left,
-      calc(50% + 521px) top,
+      calc(50% + 521px) calc(0px - 2px),
       top left;
     background-size:
       auto,
@@ -60,12 +62,12 @@
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 40px;
+    padding-top: 35px;
     padding-bottom: 526px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 224px;
+    padding-top: 222px;
     padding-bottom: 184px;
   }
 }
@@ -77,6 +79,7 @@
 
   @media (min-width: $tablet-width) {
     align-items: start;
+    margin-left: 90px;
 
     width: 420px;
   }
@@ -104,7 +107,7 @@
 
     text-align: left;
     font-size: 60px;
-    color: $text-color-basic;
+    color: $text-color-secondary;
   }
 }
 
@@ -121,7 +124,7 @@
     width: 300px;
 
     font-size: 20px;
-    color: $text-color-basic;
+    color: $text-color-secondary;
   }
 }
 
@@ -137,6 +140,7 @@
 
   @media (min-width: $tablet-width) {
     bottom: 0;
+    left: 20px;
     z-index: -1;
 
     width: 709px;
@@ -144,7 +148,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 143px;
+    top: 141px;
     left: 467px;
     z-index: 1;
 
@@ -169,5 +173,9 @@
   @media (min-width: $tablet-width) {
     width: 244px;
     margin-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 32px;
   }
 }

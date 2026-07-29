@@ -8,7 +8,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
-  color: $text-color-basic-2;
+  color: $text-color-primary;
 }
 
 .page__hero {
@@ -18,20 +18,47 @@
 }
 
 .page__heading {
-  padding-top: 26px;
-  padding-bottom: 40px;
+  position: relative;
 
-  border-top: 1px solid $border-color-base-3;
-  border-bottom: 1px solid $border-color-base-3;
+  padding-top: 27px;
+  padding-bottom: 42px;
+
+  @media (max-width: $mobile-width-only) {
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      right: 0;
+
+      width: 100vw;
+      height: 1px;
+    }
+
+    &::before {
+      top: 0;
+
+      background-color: #d9d9d9;
+      box-shadow: 100vw 0  #d9d9d9;
+    }
+
+    &::after {
+      bottom: 0;
+
+      background-color: #ebebeb;
+      box-shadow: 100vw 0 #ebebeb;
+    }
+  }
 
   @media (min-width: $tablet-width) {
-    padding-top: 40px;
-    padding-bottom: 84px;
+    padding-top: 34px;
+    padding-bottom: 85px;
 
     border: none;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 49px;
+    padding-top: 44px;
+    padding-bottom: 84px;
   }
 }

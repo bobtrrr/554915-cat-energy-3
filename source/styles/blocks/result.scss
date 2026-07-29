@@ -5,17 +5,18 @@
   background-color: $bg-color-base-2;
 
   @media (min-width: $tablet-width) {
-    padding-top: 45px;
+    padding-top: 44px;
     padding-bottom: 100px;
 
     background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 619px, $bg-color-base-2 619px);
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 69px;
+    padding-top: 0;
     padding-bottom: 75px;
 
-    background-image: linear-gradient(to bottom, transparent 205px, $bg-color-base-2 205px);
+    background-image: linear-gradient(to bottom, transparent 137px, $bg-color-base 137px);
   }
 }
 
@@ -62,12 +63,12 @@
   font-size: 36px;
   line-height: 111%;
   text-align: left;
-  color: $text-color-basic;
+  color: $text-color-secondary;
 
   @media (min-width: $tablet-width) {
     grid-area: title;
 
-    margin-bottom: 60px;
+    margin-bottom: 61px;
 
     font-size: 60px;
     line-height: 100%;
@@ -85,11 +86,15 @@
   @media (min-width: $tablet-width) {
     grid-area: description;
 
-    margin-bottom: 55px;
+    margin-bottom: 56px;
+
+    font-size: 16px;
+    line-height: 150%;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 69px;
+    width: 433px;
+    margin-bottom: 70px;
   }
 }
 
@@ -103,7 +108,7 @@
   line-height: 143%;
   text-transform: uppercase;
   text-align: center;
-  color: $text-color-basic;
+  color: $text-color-secondary;
 
   @media (min-width: $tablet-width) {
     grid-area: price;
@@ -122,11 +127,12 @@
     gap: 63px;
 
     text-align: left;
+    letter-spacing: 0.2px;
   }
 }
 
 .result__statistics {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
     grid-area: stats;
@@ -135,7 +141,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 }
 
@@ -153,5 +159,6 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    margin-top: 1px;
   }
 }

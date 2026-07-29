@@ -12,7 +12,7 @@
 
   cursor: pointer;
 
-  @include adaptiveScreenFrom(tablet) {
+  @media (min-width: $tablet-width) {
     gap: 20px;
 
     font-size: 20px;
@@ -28,10 +28,10 @@
   height: 30px;
 
   border-radius: 100%;
-  outline: 1px solid $border-color-base-2;
+  outline: 1px solid $control-border-color;
   outline-offset: -1px;
 
-  @include adaptiveScreenFrom(tablet) {
+  @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
   }
@@ -43,14 +43,19 @@
   background-size: 13px 13px;
   background-position: center;
 
-  @include adaptiveScreenFrom(tablet) {
+  @media (min-width: $tablet-width) {
     background-size: 18px 18px;
   }
 }
 
-.radio-control:hover::before,
-.radio-control:has(.radio-control__input:focus-visible)::before {
-  outline-color: $border-color-base-4;
+.radio-control:hover::before {
+  outline-color: $control-border-color-hover;
+}
+
+.radio-control:has(.radio-control__input:focus-visible) {
+  outline: 3px solid $control-border-color;
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .radio-control:has(.radio-control__input:active) {

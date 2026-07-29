@@ -79,28 +79,28 @@
       </div>
 
       <form class="diet-plan__form checkout-form" action="#" method="post">
-        <fieldset class="checkout-form__fieldset checkout-form__fieldset-info form-fieldset">
+        <fieldset class="checkout-form__fieldset-info form-fieldset">
           <legend class="visually-hidden">Данные о коте</legend>
 
           <div class="form-fieldset__field-group">
             <div class="checkout-form__field field">
               <label class="field__label" for="username-field">ИМЯ:*</label>
-              <input class="field__control" type="text" name="petname" placeholder="барсик" id="username-field">
+              <input class="field__control input input--size-s" type="text" name="petname" placeholder="барсик" id="username-field">
             </div>
 
             <div class="checkout-form__field field">
               <label class="field__label" for="pet-weight-field">Вес (кг):*</label>
-              <input class="field__control" type="number" name="petweight" placeholder="7" id="pet-weight-field">
+              <input class="field__control input input--size-s" type="number" name="petweight" placeholder="7" id="pet-weight-field">
             </div>
 
             <div class="checkout-form__field field">
               <label class="field__label" for="petage-field">Возраст (лет):</label>
-              <input class="field__control" type="number" name="petage" placeholder="7" id="petage-field">
+              <input class="field__control input input--size-s" type="number" name="petage" placeholder="7" id="petage-field">
             </div>
           </div>
         </fieldset>
 
-        <fieldset class="checkout-form__fieldset checkout-form__fieldset-diet form-fieldset form-fieldset--decorative-line">
+        <fieldset class="checkout-form__fieldset-diet form-fieldset form-fieldset--decorative-line">
           <legend class="visually-hidden">Тип диеты:</legend>
 
           <div class="form-fieldset__radio-group">
@@ -119,46 +119,46 @@
           </div>
         </fieldset>
 
-        <fieldset class="checkout-form__fieldset checkout-form__fieldset-contacts form-fieldset form-fieldset--gap-m">
-          <legend class="form-fieldset__caption title title--size-m title--decorative-line">Контактные данные <br> (владельца кота)</legend>
+        <fieldset class="checkout-form__fieldset-contacts form-fieldset form-fieldset--gap-m">
+          <legend class="form-fieldset__caption title title--size-m decorative-line decorative-line--align-top-30">Контактные данные <br> (владельца кота)</legend>
 
-          <div class="form-fieldset__field-group">
-            <div class="checkout-form__field field field--icon-email">
+          <div class="form-fieldset__field-group form-fieldset__field-group--layout-grid">
+            <div class="checkout-form__field field field--gap-s field--icon-email">
               <label class="field__label" for="useremail-field">E-mail:*</label>
-              <input class="field__control" type="email" name="useremail" placeholder="kuklachev@gmail.com" id="useremail-field">
+              <input class="field__control input input--size-s input--indent-bottom" type="email" name="useremail" placeholder="kuklachev@gmail.com" id="useremail-field">
             </div>
 
             <div class="checkout-form__field field field--icon-phone">
               <label class="field__label" for="userphone-field">Телефон:*</label>
-              <input class="field__control" type="tel" name="userphone" placeholder="8 (960) 900-60-90" id="userphone-field">
+              <input class="field__control input input--size-s" type="tel" name="userphone" placeholder="8 (960) 900-60-90" id="userphone-field">
             </div>
           </div>
         </fieldset>
 
-        <fieldset class="checkout-form__fieldset checkout-form__fieldset-comment form-fieldset form-fieldset--gap-l">
-          <legend class="form-fieldset__caption title title--size-m title--decorative-line">Комментарий</legend>
+        <fieldset class="checkout-form__fieldset-comment form-fieldset form-fieldset--gap-l">
+          <legend class="form-fieldset__caption title title--size-m decorative-line decorative-line--align-top-59">Комментарий</legend>
 
           <label class="visually-hidden" for="user-comment-field">Комментарий</label>
           <textarea class="form-fieldset__textarea textarea" name="user-comment" id="user-comment-field" placeholder="Расскажите обо всех повАдках кота"></textarea>
         </fieldset>
 
-        <fieldset class="checkout-form__fieldset checkout-form__fieldset-products form-fieldset">
-          <legend class="form-fieldset__caption title title--size-m title--decorative-line">Дополнительно</legend>
+        <fieldset class="checkout-form__fieldset-products form-fieldset">
+          <legend class="form-fieldset__caption title title--size-m decorative-line decorative-line--align-top-59">Дополнительно</legend>
 
           <div class="form-fieldset__checkbox-group">
-            <label class="checkbox-control">
+            <label class="form-fieldset__checkbox-group-item checkbox-control">
               <input class="checkbox-control__input" type="checkbox" name="additional-products" value="Sweetener" checked>
               <span class="checkbox-control__label">сахарозаменитель</span>
             </label>
-            <label class="checkbox-control">
+            <label class="form-fieldset__checkbox-group-item checkbox-control">
               <input class="checkbox-control__input" type="checkbox" name="additional-products" value="water">
               <span class="checkbox-control__label">питьевая вода</span>
             </label>
-            <label class="checkbox-control">
+            <label class="form-fieldset__checkbox-group-item checkbox-control">
               <input class="checkbox-control__input" type="checkbox" name="additional-products" value="milk">
               <span class="checkbox-control__label">молоко</span>
             </label>
-            <label class="checkbox-control">
+            <label class="form-fieldset__checkbox-group-item checkbox-control">
               <input class="checkbox-control__input" type="checkbox" name="additional-products" value="Vitamins">
               <span class="checkbox-control__label">витамины</span>
             </label>
@@ -174,12 +174,12 @@
     </section>
   </main>
 
-  <section class="contacts" aria-labelledby="contacts-title">
+  <section class="contacts contacts--theme-accent" aria-labelledby="contacts-title">
     <h2 class="visually-hidden" id="contacts-title">Контакты</h2>
 
     <div class="contacts__content-wrapper container">
       <div class="contacts__content">
-        <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__title">приглашаем <br> к сотрудничеству дилеров!</p>
 
         <address class="contacts__address">
           <p class="contacts__address-text">ул. Большая Конюшенная, д. 19/8</p>
@@ -225,7 +225,7 @@
         </li>
         <li class="social__item">
           <a class="social__link social__link--icon-youtube" href="#">
-            <span class="visually-hidden">Youtuebe</span>
+            <span class="visually-hidden">Youtube</span>
           </a>
         </li>
         <li class="social__item">

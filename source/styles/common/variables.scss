@@ -1,55 +1,47 @@
-$BREAK_POINTS: (
-  "mobile-only": 747px,
-  "tablet": 748px,
-  "desktop": 1260px,
-);
 
-
+/* FONT */
 $font-family: "Lato", sans-serif;
 $second-family: "Oswald", sans-serif;
 
-$mobile-width: 320px; //280
-$tablet-width: 748px; //708
-$desktop-width: 1260px; //1220
+/* SCREEN */
+$mobile-width: 320px;
+$tablet-width: 748px;
+$desktop-width: 1260px;
 $mobile-width-only: 747px;
 
-$basic-wdhite: #ffffff;
-$basic-black: #000000;
-$basic-green: #68b738;
-$basic-green-2: #5eaa2f;
-$basic-grey: #f2f2f2;
-$basic-grey-2: #ebebeb; //special-grey-2
-$basic-grey-3: #cdcdcd; // special-grey
-$special-grey-3: #666666; // special-grey-2
-$special-dark-grey: #444444;
-$special-dark-grey-2: #222222;
-$status-error: #ff8282;
-
+/* TEXT */
 $text-color-accent: #ffffff;
-$text-color-basic: #000000;
-$text-color-basic-2: #444444; // special-dark-grey
-$text-color-basic-3: #111111;
-$text-color-basic-4: #222222;
-$text-color-secondary: #f2f2f2; //basic-grey
+$text-color-primary: #444444;
+$text-color-secondary: #000000;
+$text-color-secondary-2: #111111;
+$text-color-secondary-3: #222222;
+$text-color-tertiary: #f2f2f2;
 
+/* BG */
+$bg-color-accent: #ffffff;
 $bg-color-base: #f2f2f2;
 $bg-color-base-2: #eaeaea;
 $bg-color-base-3: #ebebeb;
-$bg-color-special: #68b738; // basic-green
-$bg-color-special-2: #5eaa2f; //basic-green-2
+$bg-color-special: #68b738;
+$bg-color-special-2: #5eaa2f;
 $bg-color-special-3:  rgba(104, 183, 56, 0.85);
-$bg-color-accent: #ffffff;
 
-$border-color-base: #e6e6e6;
-$border-color-base-2: #cdcdcd; // special-grey
-$border-color-base-3: #d9d9d9;
-$border-color-base-4: #bababa;
-$border-color-base-light: #f2f2f2;
-$border-color-base-light-2: #e7e7e7;
+/* BORDER */
+$border-color-special: #68b738;
+$border-color-accent: #ffffff;
 
-$border-color-base-dark: #444444;
-$border-color-error: #ff8282;
+/* ICON */
+$icon-bg-color: #666666;
+$icon-bg-color-dark: #222222;
+$icon-bg-color-focus: #68b738;
+$icon-bg-color-error: #ff8282;
 
-$bg-color-icon: #666666;
-$bg-color-icon-hover: #68b738;
-$bg-color-icon-dark: #222222;
+/* INPUT */
+$input-border-color: #e7e7e7;
+$input-border-color-hover: #cdcdcd;
+$input-border-color-focus: #444444;
+$input-border-color-error: #ff8282;
+
+/* CONTROL */
+$control-border-color: #cdcdcd;
+$control-border-color-hover: #bababa;

@@ -3,17 +3,27 @@
   padding-bottom: 40px;
 
   background-color: $bg-color-base;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 67px;
+    padding-bottom: 67px;
+  }
 }
 
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    gap: 80px;
+    gap: 70px;
   }
 }
 
@@ -22,12 +32,22 @@
 
   width: 128px;
   height: 24px;
+  margin-bottom: 1px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0.8px;
+  }
 }
 
 .page-footer__line {
   display: none;
 
   @media (max-width: $mobile-width-only) {
+    display: block;
     height: 1px;
     width: 100%;
 
@@ -38,15 +58,18 @@
 .page-footer__social {
   flex-shrink: 0;
 
+  margin-top: 4px;
+
   @media (min-width: $tablet-width) {
     width: 236px;
-    margin-left: 40px;
+    margin-left: 38px;
+    margin-top: 4px;
 
     justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 284px;
+    margin-left: 294px;
   }
 }
 
@@ -57,6 +80,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 23px;
+
+  margin-top: 3px;
 
   color: inherit;
   font-size: 16px;
@@ -75,12 +100,12 @@
 
     mask-image: url("./../../icons/htmlacademy-logo.svg");
     mask-repeat: no-repeat;
-    background-color: $bg-color-icon;
+    background-color: $icon-bg-color;
   }
 
   &:hover::after,
   &:focus-visible::after {
-    background-color: $bg-color-icon-hover;
+    background-color: $icon-bg-color-focus;
   }
 
   &:active::after {
@@ -92,5 +117,10 @@
     align-self: auto;
 
     margin-left: auto;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0.8px;
   }
 }

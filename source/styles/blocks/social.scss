@@ -26,12 +26,12 @@
   text-decoration: none;
 
   &::before {
-    background-color: $bg-color-icon;
+    background-color: $icon-bg-color;
   }
 
   &:hover::before,
   &:focus-visible::before {
-    background-color: $bg-color-icon-hover;
+    background-color: $icon-bg-color-focus;
   }
 
   &:active::before {
@@ -50,6 +50,7 @@
 .social__link--icon-vkontakte::before {
   width: 27px;
   height: 17px;
+  margin-top: -1px;
 
   mask-image: url("./../../icons/icon-vk.svg");
 }
@@ -57,6 +58,7 @@
 .social__link--icon-youtube::before {
   width: 24px;
   height: 19px;
+  margin-top: -1px;
 
   mask-image: url("./../../icons/icon-youtube.svg");
 }

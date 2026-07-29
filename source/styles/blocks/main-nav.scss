@@ -19,7 +19,7 @@
     align-items: center;
     gap: 30px;
 
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 10px;
 
     background-color: $bg-color-accent;
@@ -29,8 +29,12 @@
 .main-nav__logo {
   flex-shrink: 0;
 
-  @include adaptiveScreenTo(mobile-only) {
+  @media (max-width: $mobile-width-only) {
     margin-top: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -4px;
   }
 }
 
@@ -47,7 +51,7 @@
 
   @media (max-width: $mobile-width-only) {
     position: absolute;
-    top: 70px;
+    top: 65px;
     left: 0;
     right: 0;
 
@@ -57,11 +61,14 @@
   @media (min-width: $tablet-width) {
     width: auto;
     max-width: 475px;
+    margin-right: 5px;
+    margin-top: 1px;
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
     max-width: 575px;
+    margin-right: 0;
   }
 }
 

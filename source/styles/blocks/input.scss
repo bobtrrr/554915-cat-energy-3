@@ -4,10 +4,10 @@
   display: inline-flex;
 
   width: 100%;
-  padding: 10px 20px;
+  padding: 13px;
 
   color: inherit;
-  font-family: inherit;
+  font-family: $second-family;
   font-weight: 400;
   font-size: 20px;
   text-transform: uppercase;
@@ -15,34 +15,62 @@
   border: none;
   cursor: pointer;
 
-  outline: 1px solid $border-color-base-light-2;
+  outline: 1px solid $input-border-color;
   outline-offset: -1px;
 
   &:hover {
-    outline-color: $border-color-base-2;
+    outline-color: $input-border-color-hover;
   }
 
-  &:focus {
-    outline-color: $border-color-base-dark;
+  &:focus-visible {
+    outline-color: $input-border-color-focus;
     outline-width: 2px;
     outline-offset: -2px;
   }
-
 
   &:user-invalid {
-    outline-color: $border-color-error;
+    outline-color: $input-border-color-error;
     outline-width: 2px;
     outline-offset: -2px;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    cursor: not-allowed;
   }
 }
 
 .input--error {
-  outline-color: $border-color-error;
+  outline-color: $input-border-color-error;
   outline-width: 2px;
   outline-offset: -2px;
 
   &:hover,
-  &:focus {
-    outline-color: $border-color-error;
+  &:focus-visible {
+    outline-color: $input-border-color-error;
   }
 }
+
+.input--size-s {
+  padding: 14px 37px 13px 15px;
+
+  font-size: 16px;
+  line-height: 113%;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 40px 14px 20px;
+
+    font-size: 20px;
+  }
+}
+
+/* pp start */
+.input--indent-bottom {
+  padding-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 15px;
+  }
+}
+/* pp end */
