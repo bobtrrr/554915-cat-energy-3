@@ -108,10 +108,8 @@
 .contacts__ya-map {
   height: 362px;
 
-  .ymaps-2-1-79-map,
-  .ymaps-2-1-79-i-custom-scroll {
+  .ymaps-2-1-79-map {
     width: 100% !important; /* stylelint-disable-line declaration-no-important */
-    max-width: 100% !important; /* stylelint-disable-line declaration-no-important */
   }
 
   @media (min-width: $tablet-width) {
